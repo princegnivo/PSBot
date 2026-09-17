@@ -1,0 +1,16 @@
+# aiogram sans version exacte : pocket-option exige aiohttp>=3.13, alors
+# qu'aiogram==3.13.1 exige aiohttp<3.11. On laisse pip choisir la version
+# d'aiogram la plus récente compatible avec ce aiohttp plus récent.
+# Si l'installation échoue avec un conflit de dépendances, c'est ici qu'il
+# faudra ajuster (voir README, section "Dépannage installation").
+aiogram>=3.13
+pocket-option>=0.4.0,<0.5.0
+pydantic==2.9.2
+pydantic-settings==2.5.2
+loguru==0.7.2
+numpy==1.26.4
+python-dotenv==1.0.1
+tenacity==9.0.0
+# websockets n'est nécessaire que si tu reviens à l'ancien client
+# (app/market_data_legacy.py) au lieu du SDK.
+websockets==12.0
